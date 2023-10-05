@@ -1,7 +1,6 @@
 /* font */
 html {
     font-family: 'Ubuntu', sans-serif;
-    margin: 0rem;
     color: white;
     background-color: black;
 }
@@ -10,7 +9,6 @@ html {
 body {
     margin: 0rem;
 }
-
 
 /* parralex images top */
 .top-image {
@@ -107,6 +105,11 @@ nav {
 
 /* css for opener */
 
+.main-title {
+    font-size: 1.75rem;
+    text-shadow: 0.1rem 0.1rem black;
+}
+
 .full-width-opener {
     display: flex;
     flex-direction: column;
@@ -128,7 +131,6 @@ nav {
     flex-direction: row;
     gap: 2rem;
 }
-
 
 /* css for the items */
 
@@ -227,7 +229,7 @@ nav {
     font-style: italic;
     margin: 5vw 20vw;
     text-align: center;
-    font-size: x-large;
+    font-size: 1.5rem;
 }
 
 @media (max-width: 480px) {
@@ -267,10 +269,26 @@ select {
 
 input,
 textarea {
+    border-color: black;
     border-radius: 1rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
+
+input:invalid:not(:placeholder-shown) {
+    border: 0.1rem solid red;
+}
+
+input:invalid,
+select:invalid,
+textarea:invalid {
+    border: 0.1rem solid red;
+}
+
+input:valid {
+    border: 0.1rem solid green;
+}
+
 
 input[type="text" i],
 input[type="date" i] {
